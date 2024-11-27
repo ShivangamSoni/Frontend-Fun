@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: black;
+}
+
+main {
+    min-height: 100vh;
+    background: hsla(0, 0%, 0%, 0.15);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    /* isolation: isolate; */
+    /* backdrop-filter: brightness(50%); */
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+p {
+    text-align: center;
+    font-size: 1.25rem;
+    width: 100%;
+    max-width: 35rem;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("./Bg.webp");
+    background-size: cover;
+    background-position: right;
+    z-index: -1;
+
+    mask-image: url(./ink-bg.gif);
+    mask-size: cover;
+    mask-position: center;
+}
