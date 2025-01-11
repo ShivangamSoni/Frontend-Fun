@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+
+    background-image: url(./sonu-goku-protector-qp.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+svg {
+    width: 90vw;
+    max-width: 1280px;
+    height: auto;
+    padding-top: 30vh;
+}
+
+svg path {
+    fill: transparent;
+    stroke: coral;
+    stroke-width: 1.5;
+    /* Select such a value do that the stroke dash covers the entire vector creating a perfect outline over the text */
+    stroke-dasharray: 2000;
+    /* Set the offset to dash size which will make the border transparent */
+    stroke-dashoffset: 2000;
+    /* Animate the offset */
+    animation: textAnimation 5000ms ease-in-out 1 forwards;
+}
+
+@keyframes textAnimation {
+    60% {
+        fill: transparent;
+    }
+    100% {
+        fill: white;
+        stroke-dashoffset: 0;
+    }
+}
